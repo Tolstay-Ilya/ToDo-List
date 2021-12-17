@@ -55,3 +55,11 @@ const onHeaderClick = (event) => {
     renderTodos(todos);
   }
   }
+
+
+  // RENDER
+function renderTodos(todos) {
+    const main = createMain(todos)
+    root.innerHTML = "";
+    root.append(header, main)
+  }
