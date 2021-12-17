@@ -63,3 +63,21 @@ function renderTodos(todos) {
     root.innerHTML = "";
     root.append(header, main)
   }
+
+
+
+  // COMPONENTS
+function createHeader() {
+    const header = createElement("header", "d-flex align-items-center gap-2");
+    const input = createElement("input", "form-control flex-grou-1", "");
+    const btnAdd = createElement("button", "btn btn-primary", "Add");
+    const btnDelete = createElement("button", "btn btn-danger", "Delete");
+    
+    input.id = "field"
+    btnAdd.id = "btnAdd"
+    btnDelete.id = "btnDelete"
+    
+    header.append(btnDelete, input, btnAdd);
+    
+    return header;
+  }
