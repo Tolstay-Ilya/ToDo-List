@@ -25,3 +25,16 @@ const todos = [
       isCompleted: false,
     },
   ];
+
+
+    // ROOT
+function app() {
+  
+}
+const root = document.querySelector("#root");
+const header = createHeader();
+const main = createMain(todos);
+header.addEventListener("click", event => onHeaderClick(event))
+root.append(header, main);
+
+app()
