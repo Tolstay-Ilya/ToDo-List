@@ -38,3 +38,20 @@ header.addEventListener("click", event => onHeaderClick(event))
 root.append(header, main);
 
 app()
+
+
+// HANDLES
+const onHeaderClick = (event) => {
+    if (event.target.id === "btnAdd") {
+    const todo = {
+      id: todos.length + 1,
+      text: event.target.previousElementSibling.value,
+      isCompleted: false,
+    }
+    todos.push(todo);
+    renderTodos(todos);
+  } else if (event.target.id === "btnDelete"){
+    todos.length = 0
+    renderTodos(todos);
+  }
+  }
