@@ -80,3 +80,12 @@ function createHeader() {
     
     return header;
   }
+
+  function createMain(todos){
+    const list = createElement("div", "d-flex flex-column  gap-1", "");
+    todos.forEach(todo => {
+      const todoItem = createTodoItem(todo);
+      list.append(todoItem);
+    });
+    return list;
+  }
